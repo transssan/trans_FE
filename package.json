@@ -1,0 +1,23 @@
+{
+  "name": "new_transcendence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.24.3",
+    "bootstrap": "^5.3.3",
+    "three": "^0.162.0"
+  },
+  "devDependencies": {
+    "cssnano": "^6.1.2",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.38"
+  }
+}
