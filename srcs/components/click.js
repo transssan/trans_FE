@@ -1,16 +1,24 @@
 import { navigateTo } from "./router";
 import { players, pongGameMode, setPongGameMode } from "./state";
+import { isValidPlayerNames } from "./utils";
 
 export const clickMainTitle = () => {
   navigateTo("/main");
 };
 
-export const clickPongGame = (id) => {
+export const clickGameStart = (id) => {
   const playerNameInputs = document.querySelectorAll(".player_name");
   playerNameInputs.forEach((input, index) => {
     players[index] = input.value;
   });
-  console.log("players", players);
+  console.log("game starting players", players);
+  // TODO: alert 메시지 언어별로 바꾸기?
+  // alert도 언어가 바뀔때 바뀌어야 하나?
+  if (isValidPlayerNames(players) === false) {
+    alert("영어로 입력하고 빈 문자열은 안됩니다");
+    return;
+  }
+
   if (id === "pong") navigateTo("/pong/game");
   else if (id === "dice") navigateTo("/dice/game");
 };
@@ -49,7 +57,7 @@ export function clickPongMode(id) {
   navigateTo(navigateToUrl);
 }
 
-export function startGame(id) {
+export function clickGameMode(id) {
   if (id === "pong") navigateTo("/pong");
   else if (id === "dice") navigateTo("/dice");
 }

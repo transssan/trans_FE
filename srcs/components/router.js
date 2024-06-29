@@ -9,10 +9,10 @@ import PongRoom from "../pages/PongRoom";
 import TwoFactor from "../pages/TwoFactor";
 import {
   clickMainTitle,
-  clickPongGame,
+  clickGameStart,
   clickPongMode,
   onClickLoginButton,
-  startGame,
+  clickGameMode,
 } from "./click";
 import { players } from "./state";
 
@@ -105,13 +105,13 @@ export async function buttons() {
       // id: "pong-button",
       class: "game-select-button",
       event: "click",
-      handler: (id) => startGame(id),
+      handler: (id) => clickGameMode(id),
     },
     {
       // id: "1vs1-button",
       class: "language-button",
       event: "click",
-      handler: (id) => startGame(id),
+      handler: (id) => clickGameMode(id),
     },
     {
       class: "game-mode",
@@ -121,7 +121,7 @@ export async function buttons() {
     {
       class: "game_start_button",
       event: "click",
-      handler: (id) => clickPongGame(id),
+      handler: (id) => clickGameStart(id),
     },
     {
       id: "main-title",
