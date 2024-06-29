@@ -67,3 +67,22 @@ export function onClickLoginButton() {
   alert("oauth 로그인");
   // navigateTo("/pong/room");
 }
+
+export const clickChangeLanguage = () => {
+  const btnGroup = document.querySelector(".btn-group");
+
+  if (!btnGroup) return;
+
+  // 이미 이벤트 리스너가 추가되었는지 확인
+  if (!btnGroup.hasAttribute("data-event-attached")) {
+    btnGroup.addEventListener("change", (event) => {
+      if (event.target.classList.contains("btn-check")) {
+        const selectedBtnId = event.target.id;
+        console.log(`Selected button: ${selectedBtnId}`);
+      }
+    });
+
+    // 이벤트 리스너가 추가되었음을 표시
+    btnGroup.setAttribute("data-event-attached", "true");
+  }
+};

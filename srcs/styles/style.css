@@ -319,3 +319,27 @@ body {
   font-size: 2rem;
   margin-top: 30px;
 }
+
+/* 부트스트랩 */
+.btn-group .btn-outline-primary {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  background-color: transparent !important;
+}
+
+.btn-group .btn-outline-primary:hover,
+.btn-group .btn-check:active + .btn-outline-primary,
+.btn-group .btn-check:checked + .btn-outline-primary {
+  color: var(--ref-white) !important;
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+.btn-group .btn-check:focus + .btn-outline-primary,
+.btn-group .btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(187, 112, 112, 0.5) !important;
+}
+
+.btn-group .btn-outline-primary:active:focus {
+  box-shadow: 0 0 0 0.25rem rgba(187, 112, 112, 0.5) !important;
+}

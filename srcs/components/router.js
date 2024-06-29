@@ -13,6 +13,7 @@ import {
   clickPongMode,
   onClickLoginButton,
   clickGameMode,
+  clickChangeLanguage,
 } from "./click";
 import { players } from "./state";
 
@@ -109,9 +110,9 @@ export async function buttons() {
     },
     {
       // id: "1vs1-button",
-      class: "language-button",
+      class: "btn",
       event: "click",
-      handler: (id) => clickGameMode(id),
+      handler: () => clickChangeLanguage(),
     },
     {
       class: "game-mode",
