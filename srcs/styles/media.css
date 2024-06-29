@@ -1,6 +1,11 @@
-#pong-img,
-#dice-img {
-  width: 250px;
-  /* height: 200px; */
-  height: 100%;
+@media screen and (max-width: 600px) {
+  #header {
+    flex-direction: column;
+  }
+  #pong-img,
+  #dice-img {
+    width: 150px;
+    height: 100px;
+    height: 100%;
+  }
 }

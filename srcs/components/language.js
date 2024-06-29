@@ -4,3 +4,5 @@ export let language = "ko";
 export function changeLanguage(lang) {
   language = lang;
 }
+
+// 나중에 바꾸기
