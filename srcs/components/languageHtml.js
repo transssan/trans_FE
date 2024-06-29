@@ -1,6 +1,6 @@
 import { createPlayerContainers } from "./state";
-import pingPongImage from "../images/ping-pong.png";
-import diceImage from "../images/dice.png";
+import pingPongImage from "../statics/images/ping-pong.png";
+import diceImage from "../statics/images/dice.png";
 {
   /* <img id="pong-img" src="${"/images/ping-pong.png"}" alt="Pong Game" /> */
 }
