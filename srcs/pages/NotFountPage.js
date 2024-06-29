@@ -1,4 +1,4 @@
-import PageView from "../pages/Pageview";
+import PageView from "./Pageview";
 
 class NotFoundPage extends PageView {
   async getHtml() {
@@ -8,7 +8,7 @@ class NotFoundPage extends PageView {
           <p class="neonText">404</p>
           <p class="neonText">Not Found</p>
         </div>
-    </div>
+      </div>
     `;
   }
 }

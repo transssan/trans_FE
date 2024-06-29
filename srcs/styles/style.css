@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #bb7070;
+  --main-point-color: #7e5454;
+  --main-sub-color: #eadfdf;
+  --main-font-collr: #ffffff;
+  --ref-green: #64973c;
+  --ref-red: #d64747;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+#footer,
+#header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: var(--main-sub-color);
+  align-items: center;
+  padding: 0 60px;
+}
+
+#header {
+  justify-content: space-between;
+}
+
+#footer {
+  justify-content: flex-end;
+}
+
+.main_row > p {
+  font-size: 2.5rem;
+}
+
+.main_row {
+  width: 80%;
+  height: 200px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(
+      90deg,
+      rgba(187, 112, 112, 1) 0%,
+      rgba(187, 112, 112, 0) 100%
+    ),
+    white;
+}
+
+.main_row#dice {
+  background: linear-gradient(
+      90deg,
+      rgba(187, 112, 112, 0) 0%,
+      rgba(187, 112, 112, 1) 100%
+    ),
+    white;
+}
+
+#pong-img,
+#dice-img {
+  width: 250px;
+  /* height: 200px; */
+  height: 100%;
+}
+
+#mode-select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 130px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  /* background-color: var(); */
+  background: linear-gradient(
+      90deg,
+      rgba(187, 112, 112, 1) 0%,
+      rgba(187, 112, 112, 0) 100%
+    ),
+    white;
+}
+#mode-select > p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login_button {
+  background-color: var(--main-color);
+  color: var(--main-font-collr);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.error-container {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.neonText {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+#language_toggle {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.lang {
+  background-color: var(--main-color);
+  color: var(--main-font-collr);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+}
+
+#mode-container {
+  margin-top: 30px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dice-mode {
+  background-color: var(--main-color);
+  color: var(--main-font-collr);
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 300px; */
+  width: 100%;
+  height: 500px;
+  border-radius: 100px;
+  border: 1px solid #000;
+}
+
+.pong-mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #000;
+  width: 100%;
+  /* height: 400px; */
+  height: 80%;
+  gap: 100px;
+}
+
+.pong-mode > p {
+  font-size: 2rem;
+}
+
+.player_container {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.player_container > p {
+  font-size: 2rem;
+}
+
+.player_name {
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#game_start_button {
+  background-color: var(--main-color);
+  color: var(--main-font-collr);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #000;
+}
