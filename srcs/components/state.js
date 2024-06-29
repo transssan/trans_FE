@@ -17,12 +17,14 @@ export function resetPongGameMode() {
 export const createPlayerContainers = (count) => {
   let containers = "";
   for (let i = 1; i <= count; i++) {
+    const playerOrder =
+      i === 1 ? "first" : i === 2 ? "second" : i === 3 ? "third" : "fourth";
     containers += `
-          <div id="player${i}" class="player_container">
-            <p>Player ${i}</p>
-            <input type="text" class="player_name" />
-          </div>  
-        `;
+      <div id="player${i}" class="player_container">
+        <p>${playerOrder} player</p>
+        <input type="text" class="player_name" />
+      </div>
+    `;
   }
   return containers;
 };

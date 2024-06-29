@@ -1,4 +1,5 @@
 import Dice from "../pages/Dice";
+import DiceGame from "../pages/DiceGame";
 import DiceRoom from "../pages/DiceRoom";
 import Main from "../pages/Main";
 import NotFoundPage from "../pages/NotFountPage";
@@ -15,46 +16,6 @@ import {
 } from "./click";
 import { players } from "./state";
 
-// export const router = async () => {
-//   const $routes = [
-//     { path: "/404", view: NotFoundPage },
-//     { path: "/main", view: Main },
-//     { path: "/pong", view: Pong },
-//     { path: "/dice", view: Dice },
-//     // { path: "/login", view: login },
-//     // { path: "/game", view: game },
-//     // { path: "/twoFA", view: twoFA },
-//     // { path: "/game/tournament", view: tourGame },
-//   ];
-
-//   const normalizePath = (path) =>
-//     path.endsWith("/") ? path.slice(0, -1) : path;
-
-//   const $potentialMatches = $routes.map((route) => {
-//     return {
-//       route,
-//       isMatch: normalizePath(location.pathname) === route.path,
-//     };
-//   });
-//   console.log("normalizePath", normalizePath(location.pathname));
-
-//   console.log("potentialMatches", $potentialMatches);
-//   let match = $potentialMatches.find(
-//     (potentialMatch) => potentialMatch.isMatch
-//   );
-
-//   if (!match) {
-//     match = {
-//       route: $routes[0],
-//       isMatch: true,
-//     };
-//   }
-//   const $view = new match.route.view();
-//   document.querySelector("#app").innerHTML = await $view.getHtml();
-
-//   buttons();
-// };
-
 export const router = async () => {
   const $routes = [
     { path: "/404", view: NotFoundPage },
@@ -64,7 +25,7 @@ export const router = async () => {
     { path: "/pong/game", view: PongGame },
     { path: "/dice", view: Dice },
     { path: "/dice/room/:id", view: DiceRoom },
-    { path: "/dice/game", view: DiceRoom },
+    { path: "/dice/game", view: DiceGame },
     { path: "/twofactor", view: TwoFactor },
     // { path: "/game/:id", view: Game }, // 동적 라우트 예시
     // 다른 라우트들...

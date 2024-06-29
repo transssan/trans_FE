@@ -39,18 +39,24 @@ export const PongPageLanguage = {
           <div id="mode-container">
             <div class="pong-mode">
                 <p>Slow</p>
-                <div id="slow_two"  class="game-mode">two player</div>
-                <div id="slow_four" class="game-mode">four player</div>
+                <div id="pong-select-container">
+                    <div id="slow_two"  class="game-mode pong-select">two player</div>
+                    <div id="slow_four" class="game-mode pong-select">four player</div>
+                </div>
             </div>
             <div class="pong-mode">
                 <p>Normal</p>
-                <div id="normal_two"  class="game-mode">two player</div>
-                <div id="normal_four" class="game-mode">four player</div>
+                <div id="pong-select-container">
+                    <div id="normal_two"  class="game-mode pong-select">two player</div>
+                    <div id="normal_four" class="game-mode pong-select">four player</div>
+                </div>
             </div>
             <div class="pong-mode">
                 <p>Extreme</p>
-                <div id="extreme_two"  class="game-mode">two player</div>
-                <div id="extreme_four" class="game-mode">four player</div>
+                <div id="pong-select-container">
+                    <div id="extreme_two"  class="game-mode pong-select">two player</div>
+                    <div id="extreme_four" class="game-mode pong-select">four player</div>
+                </div>
             </div>
           </div>
       </div>`,
@@ -79,7 +85,7 @@ export const PongRoomPageLanguage = (id) => {
             <img id="pong-img" src="${pingPongImage}" alt="Pong Game" />
           </div>
           <div id="mode-container">
-            <div id="pong-mode">
+            <div id="input-container">
               ${createPlayerContainers(id)}
               <div id="pong" class="game_start_button">READY!</div>
             </div>
@@ -119,7 +125,7 @@ export const PongGamePageLanguage = {
 export const DicePageLanguage = {
   ko: `
     <div id="container">
-        <div id="mode-select">
+        <div id="mode-select" class="reverse-linear">
             <img id="dice-img" src="${diceImage}" alt="Pong Game" />
             <p>Mode Select</p>
         </div>
@@ -127,7 +133,7 @@ export const DicePageLanguage = {
             <div id="_two"  class="game-mode dice-mode">Two player</div>
             <div id="_four" class="game-mode dice-mode">Four Player</div>
         </div>
-    </div>
+    </div> 
                         `,
   en: `
     <div class="oneVsOne">
@@ -151,9 +157,12 @@ export const DiceRoomPageLanguage = (id) => {
   return {
     ko: `
         <div id="container">
-          <div id="mode-select">Mode Select</div>
+          <div id="mode-select" class="reverse-linear">
+            <img id="dice-img" src="${diceImage}" alt="Pong Game" />
+            <p>Register Members</p>
+        </div> 
           <div id="mode-container">
-            <div id="pong-mode">
+            <div id="input-container">
               ${createPlayerContainers(id)}
               <div id="dice" class="game_start_button">READY!</div>
             </div>
@@ -196,69 +205,6 @@ export const DiceGamePageLanguage = {
           <div id="container">
               <div>Dice game view</div>
           </div>`,
-};
-
-export const gamePageLanguage = {
-  ko: `
-                        <div class="ball-speed-buttons">
-                            <div class="ball-speed-button" style="background-color: green;">easy</div>
-                            <div class="ball-speed-button" style="background-color: yellow;">normal</div>
-                            <div class="ball-speed-button" style="background-color: red;">hard</div>
-                        </div>
-                        <div id="game-start">game start</div>
-                            <div class="game-player">
-                            <div>
-                                <div>PlayerOne:</div>
-                                <span id="playerOneScore">0</span>
-                            </div>
-                            <div>
-                                <div>PlayerTwo:</div>
-                                <span id="playerTwoScore">0</span>
-                            </div>
-                            </div>
-                            <canvas id="gameCanvas"></canvas>
-                        </div>
-                    `,
-  en: `
-                    <div class="ball-speed-buttons">
-                    <div class="ball-speed-button" style="background-color: green;">easy</div>
-                    <div class="ball-speed-button" style="background-color: yellow;">normal</div>
-                    <div class="ball-speed-button" style="background-color: red;">hard</div>
-                    </div>
-                    <div id="game-start">game start</div>
-                        <div class="game-player">
-                        <div>
-                            <div>PlayerOne:</div>
-                            <span id="playerOneScore">0</span>
-                        </div>
-                        <div>
-                            <div>PlayerTwo:</div>
-                            <span id="playerTwoScore">0</span>
-                        </div>
-                        </div>
-                        <canvas id="gameCanvas"></canvas>
-                    </div>
-                  `,
-  jp: `
-                    <div class="ball-speed-buttons">
-                    <div class="ball-speed-button" style="background-color: green;">easy</div>
-                    <div class="ball-speed-button" style="background-color: yellow;">normal</div>
-                    <div class="ball-speed-button" style="background-color: red;">hard</div>
-                    </div>
-                    <div id="game-start">game start</div>
-                        <div class="game-player">
-                        <div>
-                            <div>PlayerOne:</div>
-                            <span id="playerOneScore">0</span>
-                        </div>
-                        <div>
-                            <div>PlayerTwo:</div>
-                            <span id="playerTwoScore">0</span>
-                        </div>
-                        </div>
-                        <canvas id="gameCanvas"></canvas>
-                    </div>
-                    `,
 };
 
 export const VerifyTwoFaPageLanguage = {

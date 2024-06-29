@@ -1,3 +1,6 @@
+/*  */
+/* pong, dice 단일 명칭으로 스타일 지정하지 않기 ->  js에서 사용*/
+
 @font-face {
   font-family: "Inknut Antiqua";
   src: url("../statics/fonts/InknutAntiqua-Light.ttf") format("truetype") 300,
@@ -17,11 +20,14 @@
   --main-color: #bb7070;
   --main-point-color: #7e5454;
   --main-sub-color: #eadfdf;
+  --slow-color: #ffebeb;
+  --normal-color: #ffadad;
+  --extreme-color: #402725;
 
-  --ref-white: #ffffff;
   --ref-black: #000000;
   --ref-green: #64973c;
   --ref-red: #d64747;
+  --ref-white: #ffffff;
   /* overflow-y: scroll; */
 }
 
@@ -56,6 +62,7 @@ body {
 #app {
   width: 100%;
   height: 100%;
+  padding: 40px 0;
   overflow-y: auto;
   /* height: calc(100% - 200px);
   min-height: 440px; */
@@ -107,9 +114,6 @@ body {
   width: 80%;
   height: 130px;
   border-radius: 100px;
-  border: 1px solid #000;
-  margin-top: 30px;
-  /* background-color: var(); */
   background: linear-gradient(
       90deg,
       rgba(187, 112, 112, 1) 0%,
@@ -120,11 +124,21 @@ body {
 #mode-select > p {
   font-size: 2.5rem;
   font-weight: 600;
+  color: var(--ref-white);
+}
+
+#mode-select.reverse-linear {
+  background: linear-gradient(
+      90deg,
+      rgba(187, 112, 112, 0) 0%,
+      rgba(187, 112, 112, 1) 100%
+    ),
+    white;
 }
 
 #container {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +178,6 @@ body {
 
 .lang {
   background-color: var(--main-color);
-
   color: var(--ref-white);
   --ref-black: #000000;
   padding: 10px 20px;
@@ -185,7 +198,7 @@ body {
 #mode-container {
   margin-top: 30px;
   width: 80%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,20 +206,24 @@ body {
 }
 
 .dice-mode {
-  background-color: var(--main-color);
-
-  color: var(--ref-white);
+  color: var(--ref-black);
   --ref-black: #000000;
   padding: 10px 20px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 300px; */
   width: 100%;
-  height: 500px;
-  border-radius: 100px;
-  border: 1px solid #000;
+  height: 400px;
+  font-size: 2rem;
+}
+
+#_two {
+  background-color: var(--slow-color);
+}
+
+#_four {
+  background-color: var(--normal-color);
 }
 
 .pong-mode {
@@ -215,23 +232,68 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid #000;
   width: 100%;
-  /* height: 400px; */
-  height: 80%;
-  gap: 100px;
+  /* max-width: 300px; */
+  min-width: 160px;
+  /* height: 80%; */
+  height: 300px;
+  /* gap: 100px; */
+}
+
+.pong-mode:nth-of-type(1) {
+  background-color: var(--slow-color);
+}
+
+.pong-mode:nth-of-type(2) {
+  background-color: var(--normal-color);
+}
+
+.pong-mode:nth-of-type(3) {
+  background-color: var(--extreme-color);
+  color: var(--ref-white);
 }
 
 .pong-mode > p {
   font-size: 2rem;
 }
 
+#input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  width: 100%;
+  /* height: 100%; */
+  background-color: var(--main-point-color);
+  border-radius: 20px;
+}
+
+#pong-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  /* width: 80%; */
+  /* height: 100%; */
+}
+
+.pong-select {
+  background-color: var(--main-color);
+  color: var(--ref-black);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
 .player_container {
   display: flex;
-  width: 80%;
+  /* width: 80%; */
+  width: 600px;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .player_container > p {
@@ -242,16 +304,18 @@ body {
   font-size: 2rem;
   border-radius: 10px;
   padding: 10px 20px;
+  /* width: 400px; */
 }
 
-#game_start_button {
-  background-color: var(--main-color);
-
+.game_start_button {
+  background-color: var(--ref-red);
   color: var(--ref-white);
-  --ref-black: #000000;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 20px;
   font-size: 2rem;
-  border: 1px solid #000;
+  margin-top: 30px;
 }
